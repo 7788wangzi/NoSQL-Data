@@ -19,3 +19,12 @@ Partition是数据存储的分类依据，Partition Key相同的文档(documents
 - 拥有相同Partition Key的所有文档(documents) 会被存放在同一个篮子里。
 - 如果查询条件时Partition key, 那么就如同在同一个篮子中找文件，这样查找起来会高效。
 - 如果查询条件不是Partition Key, 那么就如同在不同的篮子之间来回查找，则效率低下。
+
+## 数据的分类
+
+不同数据依据用途可以用不同的数据库存储， 数据可以分为：
+- 结构化
+- 本结构化
+- 无结构
+
+![数据的分类](media/data-classification.png)
