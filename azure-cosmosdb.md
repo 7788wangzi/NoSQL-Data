@@ -13,7 +13,7 @@ Partition是数据存储的分类依据，Partition Key相同的文档(documents
 - 可以选取商品的ID作为Partition Key, 那么同一个商品的所有销售数据都存放于同一个Partition， 以商品的ID作为查询条件，则性能高，代价小。
 - 可以选取顾客的ID作为Partition Key, 那么同一个顾客所购买的历史纪录数据都存放在同一个Partition, 以顾客的ID作为查询条件，则性能高，代价小。
 
-![Partition Key示例图](../media/partitionkey.png)
+![Partition Key示例图](media/partitionKey.png)
 
 如果把数据存储看做时把鸡蛋放到篮子中，那么：
 - 拥有相同Partition Key的所有文档(documents) 会被存放在同一个篮子里。
