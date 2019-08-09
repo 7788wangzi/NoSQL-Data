@@ -53,3 +53,40 @@ cat HelloWorld.txt neural-tts.txt
 ```
 paste HelloWorld.txt neural-tts.txt
 ```
+
+### 使用`grep`在文件中进行查找匹配
+```
+grep "speech" neural-tts.txt
+```
+
+在多个文件中搜索
+```
+grep "speech" neural-tts.txt HelloWorld.txt
+```
+
+使用`-l`参数只列出包含匹配字符串的文件名
+```
+grep -l "speech" neural-tts.txt
+```
+
+使用`-c`参数统计匹配字符串在文件中出现的次数
+```
+grep -c "speech" neural-tts.txt
+```
+
+使用`-i`参数设置查找忽略大小写
+```
+grep -i "O" neural-tts.txt
+```
+
+使用`-v`输出没有匹配上的行
+
+**使用正则表达式规则查找日志文件**
+查找以Nov 10开始的日志行
+```
+grep "^Nov 10" messages
+```
+查找以terminating.结尾的日志行
+```
+grep "terminating.$" messages
+```
