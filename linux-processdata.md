@@ -105,3 +105,29 @@ history
 history | grep "ls"
 ```
 
+### 使用`&`符号让命令在后台运行 （当前命令不阻塞后续命令执行），适用于没有数据依赖的命令
+
+```
+cppcheck.sh &
+churn.sh &
+run.sh &
+
+wait
+echo "All 3 complete"
+```
+
+### 使用`xargs`组合管道`|`将前一个命令的输出作为后一个命令的输入
+下载文件中所列出的文件
+```
+cat url-list.txt | xargs wget -c
+```
+
+查找系统中的jpg文件，并压缩
+```
+find / -name *.jpg -type f -print | xargs tar -cvzf images.tar.gz
+```
+
+查找系统中的jpg文件，并拷贝
+```
+ls *.jpg | xargs -nl -i cp {} /external-hard-drive/directory
+```
