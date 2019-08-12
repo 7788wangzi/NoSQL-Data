@@ -90,3 +90,18 @@ grep "^Nov 10" messages
 ```
 grep "terminating.$" messages
 ```
+
+### 使用`awk`命令打印部分列到屏幕
+```
+awk "{print $2}" 3.txt
+```
+
+### 使用`history`命令查看以前输入过的命令
+```
+history
+```
+使用个管道|查找对`ls`命令的使用记录
+```
+history | grep "ls"
+```
+
