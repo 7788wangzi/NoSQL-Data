@@ -11,6 +11,20 @@ NoSQL是适应Scale-out的模式，这种分布式的模式并不能满足关系
 
 ![示例图](media/graph-example.png)
 
+图论数据库由**结点**(nodes),**关系**(relationships)，以及结点可以有自己的**属性**(attributes)。
+
+操作有创建，匹配(Match)，条件，返回等。比如，以下
+
+```
+
+
+MATCH (p:Product)
+WHERE p.productName IN ['Chocolade','Chai']
+RETURN p.productName, p.unitPrice;
+
+
+```
+
 ## Partition key的概念
 
 Partition是数据存储的分类依据，Partition Key相同的文档(documents)存放在同一块区域，使用partition Key来检索数据会获得**很高的性能**和**很少的代价**。
