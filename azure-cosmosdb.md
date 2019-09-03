@@ -1,5 +1,8 @@
 ## NoSQL
 NoSQL是Not Only SQL的缩写。
+提升性能的方式有两种：Scale-up和Scale-out。 Scale-up是购买更高性能硬件，以满足更高性能的数据读写要求。Scale-out是通过扩大规模，使用更多的小性能的硬件，通过一个分布式系统来满足更高性能的数据读写要求。
+
+NoSQL是适应Scale-out的模式，这种分布式的模式并不能满足关系数据库的数据ACID原则的要求。NoSQL的设计，只能满足CAP（Consistency， Availability, Partition)之中，同时满足两个。
 
 ## Gremlin API - graph query language
 图论API，针对图论数据库的查询语言。 
