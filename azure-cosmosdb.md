@@ -1,3 +1,6 @@
+## NoSQL
+NoSQL是Not Only SQL的缩写。
+
 ## Gremlin API - graph query language
 图论API，针对图论数据库的查询语言。 
 
